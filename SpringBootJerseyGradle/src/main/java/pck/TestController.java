@@ -26,6 +26,13 @@ public class TestController {
     private String DIR;
     
     @GET
+    @Produces("text/plain")
+    public String getInstrucciones() {
+        System.out.println("### raíz: instrucciones");
+        return "Enviar instrucciones";
+    }    
+    
+    @GET
     @Path("now")
     @Produces("text/plain")
     public String getDateTime() {
